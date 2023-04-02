@@ -41,9 +41,9 @@ _Proyecto final para coderhouse, donde implementamos en un ecommerce en este cas
 - ``` npm install ```
 - ``` npm run dev ```
 
-## funcionamiento 
+## Funcionamiento 
 
-**Se puede navegar a toda la pagina en todo momento** 
+**Se puede navegar a toda la pagina en todo momento** :point_down:
 ![Gif de navegacion](./src/assets/navegacion.gif)
 
 **detalles de productos y agregar al carrito**
