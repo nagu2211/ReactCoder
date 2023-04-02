@@ -46,19 +46,19 @@ _Proyecto final para coderhouse, donde implementamos en un ecommerce en este cas
 **Se puede navegar a toda la pagina en todo momento** :point_down:
 ![Gif de navegacion](./src/assets/navegacion.gif)
 
-**detalles de productos y agregar al carrito**
+**detalles de productos y agregar al carrito** :point_down:
 
 ![gif de agregar producto](./src/assets/agregarproducto.gif)
 
-**Carrito**
+**Carrito** :point_down:
 
 ![gif de funcionamiento del carrito](./src/assets/carrito.gif)
 
-**Pedido de ticket de compra**
+**Pedido de ticket de compra** :point_down:
 
 ![gif de ticket de compra](./src/assets/ticket.gif)
 
-**Puedes dejar tu email para recibir novedades y ofertas**
+**Puedes dejar tu email para recibir novedades y ofertas** :point_down:
 
 ![gif de novedades](./src/assets/novedades.gif)
 
