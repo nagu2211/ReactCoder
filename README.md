@@ -35,7 +35,7 @@ _Proyecto final para coderhouse, donde implementamos en un ecommerce en este cas
 
 ## Instalacion
 
-- ``` git clone --https://github.com/nagu2211/coderReact.git ```
+- ``` git clone https://github.com/nagu2211/coderReact.git ```
 - ``` npm install ```
 - ``` npm run dev ```
 
