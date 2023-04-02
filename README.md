@@ -39,17 +39,28 @@ _Proyecto final para coderhouse, donde implementamos en un ecommerce en este cas
 - ``` npm install ```
 - ``` npm run dev ```
 
+## funcionamiento 
 
+**Se puede navegar a toda la pagina en todo momento** 
+![Gif de navegacion](./src/assets/navegacion.gif)
 
-**Adjunto Gif de como deberia verse y para mostrar la navegacion de la pagina con algunas solicitudes a la base de datos** 
+**detalles de productos y agregar al carrito**
 
+![gif de agregar producto]()
 
+**Carrito**
 
-![Gif de navegacion]()
+![gif de funcionamiento del carrito]()
 
+**Pedido de ticket de compra**
 
+![gif de ticket de compra]()
 
-1. Home : Bienvenida
+**Puedes dejar tu email para recibir novedades y ofertas**
+
+![gif de novedades]()
+
+1. Home : Bienvenida 
 
 1. catalogo: Todos los productos
 1. marcas: Separa por categorias

@@ -24,9 +24,7 @@ const resumenCompra = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-
     const db = getFirestore();
-
     const queryDoc = doc(db, "orden", confirmarResumen);
     getDoc(queryDoc).then((res) => setResumen({ id: res.id, ...res.data() }));
   }, [confirmarResumen]);
@@ -60,6 +58,8 @@ const resumenCompra = () => {
     );
   }
 
+
+  console.log(resumen.fecha)
   return (
     <div className="resumenCompra">
       <Center>
@@ -68,10 +68,11 @@ const resumenCompra = () => {
             <h2 className="titulo">RESUMEN DE COMPRA</h2>
             <h2 className="titulo">"MY WATCH"</h2>
             <p className="id">id de factura: {resumen.id}</p>
+            <p className="id">id de factura: {resumen.fecha}</p>
             {Array.isArray(resumen.productos) &&
               resumen.productos.map((producto) => {
                 return (
-                  <p className="productos">
+                  <p className="productos" key={producto.id}>
                     {producto.cantidad} x {producto.nombre} -- ${" "}
                     {producto.subtotal} ARS{" "}
                   </p>

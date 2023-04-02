@@ -1,4 +1,4 @@
-import { collection, addDoc, getFirestore } from "firebase/firestore";
+import { collection, addDoc, getFirestore, Timestamp, serverTimestamp } from "firebase/firestore";
 import { useState, useContext } from "react";
 import { CartContext } from "../../context/ShopppingCartContext";
 import {
@@ -52,6 +52,7 @@ const EnviarCompra = ({ total }) => {
       subtotal: product.precio * product.cantidad,
     })),
     total,
+    fecha: serverTimestamp()
   };
 
   const orderCollection = collection(db, "orden");

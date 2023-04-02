@@ -10,7 +10,7 @@ const ItemDetail = ({ detalle, index }) => {
     setIndice(index);
   };
 
-  /* hago una confirmacion con && para que sepa que es un array */
+  /* hago una confirmacion con && para decirle que voy a manipular un array */
   return (
     <div className="appDetail">
       {
