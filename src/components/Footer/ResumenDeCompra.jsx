@@ -22,6 +22,9 @@ const resumenCompra = () => {
     }
   };
 
+  const new_date = new Date();
+  let order_date = new_date.toLocaleString();
+  
   useEffect(() => {
     window.scrollTo(0, 0);
     const db = getFirestore();
@@ -58,8 +61,8 @@ const resumenCompra = () => {
     );
   }
 
-
-  console.log(resumen.fecha)
+  
+  
   return (
     <div className="resumenCompra">
       <Center>
@@ -68,7 +71,6 @@ const resumenCompra = () => {
             <h2 className="titulo">RESUMEN DE COMPRA</h2>
             <h2 className="titulo">"MY WATCH"</h2>
             <p className="id">id de factura: {resumen.id}</p>
-            <p className="id">id de factura: {resumen.fecha}</p>
             {Array.isArray(resumen.productos) &&
               resumen.productos.map((producto) => {
                 return (

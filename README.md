@@ -46,19 +46,19 @@ _Proyecto final para coderhouse, donde implementamos en un ecommerce en este cas
 
 **detalles de productos y agregar al carrito**
 
-![gif de agregar producto]()
+![gif de agregar producto](./src/assets/agregarproducto.gif)
 
 **Carrito**
 
-![gif de funcionamiento del carrito]()
+![gif de funcionamiento del carrito](./src/assets/carrito.gif)
 
 **Pedido de ticket de compra**
 
-![gif de ticket de compra]()
+![gif de ticket de compra](./src/assets/ticket.gif)
 
 **Puedes dejar tu email para recibir novedades y ofertas**
 
-![gif de novedades]()
+![gif de novedades](./src/assets/novedades.gif)
 
 1. Home : Bienvenida 
 
