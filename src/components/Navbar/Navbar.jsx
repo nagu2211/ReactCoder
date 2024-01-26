@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../Button/ButtonGeneral";
 import { MenuButton, MenuList, MenuItem, Menu } from "@chakra-ui/react";
 import CartWidget from "./CartWidget";
-import "./Navbar.css";
+
 
 function NavBar() {
   const [click, setClick] = useState(false);
