@@ -1,3 +1,84 @@
+.sectionCart{
+  height: 100vh;
+  display: grid;
+  min-height: 100%;
+  grid-template-areas: 
+    "productCart separateBar endBuy";
+  grid-template-columns: repeat(3,1fr) ;
+}
+.productCart{
+  grid-area: productCart;
+}
+.table{
+  grid-area:table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th{
+  
+  border-bottom: 3px solid #ececec;
+    font-size: .9em;
+    line-height: 1.3;
+    padding: 0.5em;
+    text-align: left;
+  letter-spacing: .05em;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+th:first-child{
+  padding-left: 0;
+}
+.separateBar{
+  grid-area: separateBar;
+}
+#verticle-line{
+  width: 3px;
+  height: 50vh;
+  background-color: #ececec;
+}
+td{
+  text-align: left;
+  padding: 0.5em;
+  font-size: .9em;
+  line-height: 1.3;
+}
+td.productTitle{
+  text-overflow: ellipsis;
+  word-break: break-word;
+  width: 7em;
+}
+td.productPrice{
+  width: 7em;
+}
+td.productQty{
+  width: 7em;
+}
+td.buttonVaciar{
+  width: 7em;
+}
+td.buttonGoCatalog{
+  width: 7em;
+}
+td.productSubtotal{
+  width: 7em;
+}
+.endBuy{
+  grid-area:endBuy;
+  margin-left: -120px;
+}
+#headTableProduct{
+  text-align: center;
+}
+.removeButton{
+  padding: .5em;
+  width: 20px;
+}
+.imageProduct{
+  max-width: 90px;
+  min-width: 60px;
+  width: 90px;
+}
 .alerta {
   display: flex;
   justify-content: center;
@@ -78,9 +159,7 @@
   margin: 2rem;
   flex-wrap: wrap;
 }
-.botonVaciar{
-  margin-bottom:  20px;
-}
+
 .formFondo{
   background-color: white;
   border-radius: 5px;

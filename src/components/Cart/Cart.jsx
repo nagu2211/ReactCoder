@@ -18,17 +18,13 @@ import { Link } from "react-router-dom";
 import EnviarCompra from "./EnviarCompra";
 import "./Cart.css";
 
-
 const Cart = () => {
-
   useEffect(() => {
     window.scrollTo(0, 0);
-  },[])
+  }, []);
 
   const { cart, eliminarProducto, precioTotal, vaciarCarrito } =
     useContext(CartContext);
-
-  
 
   if (cart.length === 0) {
     return (
@@ -43,7 +39,89 @@ const Cart = () => {
   }
 
   return (
-    <div className="carritoFondo">
+    <section className="sectionCart">
+      <div className="productCart">
+        <table className="table">
+          <thead>
+            <tr>
+              <th id="headTableProduct" colSpan="3">
+                PRODUCT
+              </th>
+              <th>PRICE</th>
+              <th>QUANTITY</th>
+              <th>SUBTOTAL</th>
+            </tr>
+          </thead>
+          <tbody>
+            {cart.map((item) => {
+              return (
+                <tr key={item.id}>
+                  <td className="removeButton">
+                    <Button
+                      variant="solid"
+                      colorScheme="red"
+                      onClick={() => eliminarProducto(item.id)}
+                      size="xs"
+                    >
+                      <i className="fa-solid fa-x"></i>
+                    </Button>
+                  </td>
+                  <td className="imageProduct">
+                    <Image
+                      maxW="100%"
+                      verticalAlign="middle"
+                      src={item.img[0]}
+                      alt="Product"
+                      display="inline-block"
+                    />
+                  </td>
+                  <td className="productTitle">{item.nombre}</td>
+                  <td className="productPrice">${item.precio}</td>
+                  <td className="productQty">{item.cantidad}</td>
+                  <td className="productSubtotal">
+                    ${item.cantidad * item.precio}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+          <tfoot>
+            <tr>
+              <td></td>
+            <td className="buttonGoCatalog"><Link to="/catalogo">
+            <Button colorScheme="blue" className="botonVaciar"><i className="fa-solid fa-arrow-left"></i>CATALOG</Button>
+        </Link></td>
+            <td  className="buttonVaciar"><Button colorScheme="red" onClick={vaciarCarrito} className="botonVaciar">CLEAR CART</Button></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div className="separateBar" id="verticle-line">
+      </div>
+      <div className="endBuy">
+      <table className="table2">
+          <thead>
+            <tr>
+              <th colSpan="2">
+                TOTAL OF CART
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            <td>TOTAL</td>
+            <td>$ {precioTotal()}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+};
+
+export default Cart;
+
+/*<div className="carritoFondo">
       <Alert status="warning" className="alerta">
         <AlertIcon />
         Atencion: No podras adquirir mas productos del stock disponible
@@ -112,8 +190,4 @@ const Cart = () => {
       
      
       <EnviarCompra total={precioTotal()} />
-    </div>
-  );
-};
-
-export default Cart;
+    </div>*/
